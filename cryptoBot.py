@@ -6,12 +6,14 @@
 	# View Trade
 
 	
-import json
-import requests
+import os, json, hmac, hashlib, time, requests, base64
 from pprint import pprint
+from dotenv import load_dotenv
 
-def main()
-	
+import envSettings
+# We need to import the
+def main():
+	load_dotenv()
 	
 main()
 
