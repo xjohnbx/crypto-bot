@@ -3,7 +3,8 @@
 
 # We need to generate an api account via Coinbase pro
 # This will give us:
-	# Key Secret Passphrase
+	# View Trade
+
 	
 import json
 import requests
