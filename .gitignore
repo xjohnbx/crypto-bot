@@ -1,2 +1,4 @@
 .env
+.notes
+accountIds.py
 __pycache__*
