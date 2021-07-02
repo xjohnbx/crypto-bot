@@ -5,9 +5,23 @@ from currencyEnum import Currency
 
 def main():
 	provider = CoinbaseAPIRoutes()
-#	provider.getAccountWithId(Currency.ONEINCH)
-	provider.getAccounts()
-#	provider.getAccountHistory()
+
+# Working Routes:
+
+	# Account Routes:
+	#	provider.getAllAccounts()
+	#	provider.getAccountWithId(Currency.ATOM)
+	#	provider.getAccountHistory(Currency.ATOM)
+	#	provider.getAccountHolds(Currency.ATOM)
+
+	# Order Routes
+	#	provider.placeOrder(price='.01', product_id='DOGE-USD', side='buy', size='1')
+
+
+# Routes that are being worked on:
+
+
+
 	
 main()
 

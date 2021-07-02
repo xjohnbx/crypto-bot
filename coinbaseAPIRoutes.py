@@ -11,7 +11,9 @@ class CoinbaseAPIRoutes():
 		self.auth = CoinbaseAPIAuth()
 		self.api_url = 'https://api.pro.coinbase.com/'
 		
-	def getAccounts(self):
+		
+	# Account Routes
+	def getAllAccounts(self):
 		getRequest = requests.get(self.api_url + 'accounts', auth=self.auth)
 		pprint(getRequest.json())
 
@@ -19,9 +21,20 @@ class CoinbaseAPIRoutes():
 		getRequest = requests.get(self.api_url +'accounts/' + id.value, auth=self.auth)
 		pprint(getRequest.json())
 		
-	def getAccountHistory(self, ):
-		getRequest = requests.get(self.api_url + 'accounts/ledger', auth=self.auth)
+	def getAccountHistory(self, id):
+		getRequest = requests.get(self.api_url + 'accounts/' + id.value + '/ledger', auth=self.auth)
 		pprint(getRequest.json())
+	
+	def getAccountHolds(self, id):
+		getRequest = requests.get(self.api_url + 'accounts/' + id.value + '/holds', auth=self.auth)
+		pprint(getRequest.json())
+		
+	
+	# Order Routes
+	def placeOrder(self, price, product_id, side, size):
+		postRequest = requests.post(self.api_url + 'orders', data=json.dumps({'size': size, 'price': price, 'side': side, 'product_id': product_id}), auth=self.auth)
+		pprint(postRequest.json())
+		
 		
 		
 #	def getPriceData(self):
