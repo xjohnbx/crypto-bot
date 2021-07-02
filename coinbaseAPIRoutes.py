@@ -34,13 +34,3 @@ class CoinbaseAPIRoutes():
 	def placeOrder(self, price, product_id, side, size):
 		postRequest = requests.post(self.api_url + 'orders', data=json.dumps({'size': size, 'price': price, 'side': side, 'product_id': product_id}), auth=self.auth)
 		pprint(postRequest.json())
-		
-		
-		
-#	def getPriceData(self):
-#
-# Our next step is going to be placing an order.
-# This is a real order so don't do anything ridiculous
-# Steps:
-# 		- Create getOrder(self, product):
-# 		- Create Enum for products on Coinbase to send in the 'product' paramater
