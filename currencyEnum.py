@@ -4,7 +4,7 @@ from enum import Enum
 import accountIds
 
 class Currency(Enum):
-	ONEINCH = accountIds.ONEINCH
+#	1INCH = accountIds.1INCH
 	AAVE = accountIds.AAVE
 	ADA = accountIds.ADA
 	ALGO = accountIds.ALGO
